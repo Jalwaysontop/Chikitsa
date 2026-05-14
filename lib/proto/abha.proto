@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package abha;
+
+message AbhaProfile {
+    string abha_id = 1;
+    string name = 2;
+    string gender = 3;
+    string date_of_birth = 4;
+    string address = 5;
+    bytes photo_webp = 6;
+    string state_name = 7;
+    string district_name = 8;
+    string pincode = 9;
+    string mobile = 10;
+}
+
+message AuthSession {
+    string txn_id = 1;
+    string otp_status = 2;
+    string error_message = 3;
+}

@@ -1,0 +1,5 @@
+Original JSON Size: 337 bytes
+Protobuf Raw Size: 149 bytes
+Final Compressed Size (GZIP proxy): 168 bytes
+Total Savings: 169 bytes
+Compression Ratio: 50.1%

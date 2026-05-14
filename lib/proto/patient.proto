@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message Location {
+  double lat = 1;
+  double lng = 2;
+}
+
+message PatientData {
+  uint32 patient_id = 1;
+  string patient_name = 2;
+  uint32 age = 3;
+  
+  enum Gender {
+    GENDER_UNKNOWN = 0;
+    GENDER_MALE = 1;
+    GENDER_FEMALE = 2;
+    GENDER_OTHER = 3;
+  }
+  Gender gender = 4;
+  
+  uint64 phone = 5;
+  repeated string symptoms = 6;
+  float temperature = 7;
+  string blood_pressure = 8;
+  uint32 heart_rate = 9;
+  int64 timestamp_unix_ms = 10;
+  Location location = 11;
+}

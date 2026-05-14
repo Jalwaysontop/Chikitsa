@@ -1,0 +1,13 @@
+# Backend API Requirements
+fastapi
+uvicorn
+python-multipart
+
+# OCR & Image Processing
+paddleocr
+paddlepaddle
+opencv-python-headless
+numpy
+
+# Scraper / GS1
+playwright
