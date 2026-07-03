@@ -1,8 +1,8 @@
 # Chikitsa 🏥
 
-**Rural Healthcare Diagnostics App — Optimized for 2G Networks**
+**Rural Healthcare Diagnostics App — Optimized for 2G-3G Networks**
 
-Chikitsa (चिकित्सा) is a comprehensive healthcare diagnostics application built with Flutter, designed to operate efficiently in low-bandwidth environments across rural India. It empowers frontline health workers, ASHA workers, and rural patients with tools for medical assessment, medicine verification, disease surveillance, and medication management — all optimized to work on 2G connections.
+Chikitsa (चिकित्सा) is a comprehensive healthcare diagnostics application built with Flutter, designed to operate efficiently in low-bandwidth environments across rural India. It empowers frontline health workers, ASHA workers, and rural patients with tools for medical assessment, medicine verification, disease surveillance, and medication management — all optimized to work on 2G-3G connections.
 
 ---
 
@@ -12,7 +12,7 @@ Chikitsa (चिकित्सा) is a comprehensive healthcare diagnostics ap
 - Structured patient data collection: demographics, vitals (temperature, BP, heart rate), symptoms, and geolocation.
 - Data serialized using **Protocol Buffers (Protobuf)** and compressed with **Zstandard (Zstd)** for minimal payload size.
 - Uses a pre-trained compression dictionary (`patient_dict_32k.zst`) via native FFI bindings for maximum compression on small medical payloads.
-- A full patient record can be transmitted even on a 2G connection (~10–20 kbps).
+- A full patient record can be transmitted even on a 2G-3G connection (~10–20 kbps).
 
 ### 💊 Medicine Verification (Rx Scanner)
 - Photograph a medicine package using the phone camera.
@@ -258,7 +258,7 @@ The verification pipeline has three stages:
 ## 🎨 Design Philosophy
 
 - **Offline-first**: Barcode validation, CDSCO matching, generic alternatives, medication tracking — all work without internet.
-- **2G-optimized**: Protobuf + Zstd compression reduces payloads by 80–90%. Image chunking with retry handles flaky connections.
+- **2G-3G-optimized**: Protobuf + Zstd compression reduces payloads by 80–90%. Image chunking with retry handles flaky connections.
 - **No API keys required**: The entire medicine verification pipeline runs locally — no third-party APIs, no billing, no rate limits.
 - **Brutalist UI**: Square corners, bold borders, high contrast, heavy typography — intentionally designed for readability on low-end phones in bright outdoor conditions.
 - **Accessibility**: Multi-language support (5 Indian languages), voice input, and large touch targets for users of all literacy levels.
